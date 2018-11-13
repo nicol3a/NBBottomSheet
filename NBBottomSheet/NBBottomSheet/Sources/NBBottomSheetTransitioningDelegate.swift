@@ -1,6 +1,6 @@
 //
 //  NBBottomSheetTransitioningDelegate.swift
-//  NBIBottomSheet
+//  NBBottomSheet
 //
 //  Created by Bichon, Nicolas on 2018-10-02.
 //

@@ -1,8 +1,16 @@
 # NBBottomSheet
 
-**NBBottomSheet** is an open-source iOS library in Swift that lets you present a bottom sheet. It works with Auto Layout to calculate the size of the bottom sheet.
+[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg)](https://github.com/Carthage/Carthage)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/NBBottomSheet.svg)](http://cocoapods.org/pods/NBBottomSheet)
+[![Swift 4.2](https://img.shields.io/badge/Swift-4.2-orange.svg?style=flat)](https://developer.apple.com/swift/)
+[![Platform](https://img.shields.io/cocoapods/p/NBBottomSheet.svg)](http://www.apple.com/ios/)
+[![License](https://img.shields.io/github/license/nicol3a/NBBottomSheet.svg)](https://github.com/nicol3a/NBBottomSheet/blob/master/LICENSE)
 
-![Demo](demo.gif)
+**NBBottomSheet** is an open-source iOS library that lets you present a bottom sheet using Auto Layout.
+
+The size of the bottom sheet is calculated based on the Auto Layout constraints of the view.
+
+![Demo](https://github.com/nicol3a/NBBottomSheet/blob/master/demo.gif)
 
 ## Requirements
 
@@ -41,9 +49,17 @@ To integrate NBBottomSheet into your Xcode project using [Carthage](https://gith
 github "nicol3a/NBBottomSheet" ~> 1.0.0
 ```
 
+Then, run the following command:
+
+```bash
+$ carthage update
+```
+
+Drag the built `NBBottomSheet.framework` from the Carthage build folder into the “Embedded Binaries” section in the "General" panel of the application target.
+
 ### Manually
 
-Drag the `NBBottomSheet.xcodeproj` file into your project and add the `NBBottomSheet.framework` in the *Embedded Binaries* section.
+Drag the `NBBottomSheet.xcodeproj` file into your project and add the `NBBottomSheet.framework` in the "Embedded Binaries" section in the "General" panel of the application target.
 
 ## Usage
 
@@ -73,11 +89,11 @@ let bottomSheetController = NBBottomSheetController(configuration: configuration
 
 The library relies on Auto Layout to calculate the size of the view controller being presented.
 
-You can either use Storyboards or xibs to create your view controller and set the Size to *Freeform* (*Simulated Metrics* section in the *Attributes inspector* panel), or you can create your view in code.
+You can either use Storyboards or xibs to create your view controller and set the Size to "Freeform" ("Simulated Metrics" section in the "Attributes inspector" panel), or you can create your view in code.
 
 ## License
 
-NBBottomSheet is available under the MIT license. See the [`LICENSE`](LICENSE) file for more information.
+NBBottomSheet is available under the MIT license. See the [`LICENSE`](https://github.com/nicol3a/NBBottomSheet/blob/master/LICENSE) file for more information.
 
 ## Acknowledgements
 

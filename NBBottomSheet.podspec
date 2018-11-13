@@ -5,7 +5,7 @@ Pod::Spec.new do |spec|
   spec.homepage         = 'https://github.com/nicol3a/NBBottomSheet'
   spec.authors          = { 'Nicolas Bichon' => 'bichon.nicolas@gmail.com' }
   spec.summary          = 'An iOS library that presents a bottom sheet using Auto Layout.'
-  spec.source           = { :git => 'https://github.com/nicol3a/NBBottomSheet', :tag => 'v1.0.0' }
+  spec.source           = { :git => 'https://github.com/nicol3a/NBBottomSheet.git', :tag => '1.0.0' }
   spec.source_files     = 'NBBottomSheet/NBBottomSheet/Sources/**/*.{h,m,swift}'
   spec.framework        = 'Foundation', 'UIKit'
   spec.platform         = :ios, '9.0'
