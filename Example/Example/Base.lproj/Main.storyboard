@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8Yd-Xd-8eZ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--NBBottomSheet Example-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,50 +18,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NBBottomSheet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abM-hp-Xi2">
-                                <rect key="frame" x="125.5" y="40" width="124" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1d0-Qg-6HV">
-                                <rect key="frame" x="143.5" y="91" width="88" height="30"/>
-                                <state key="normal" title="Present alert"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QPQ-oy-8PK">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <sections/>
                                 <connections>
-                                    <action selector="alertButtonTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bFV-YX-fED"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="cyt-XR-I9e"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="QVI-SW-Dik"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ib-gr-Cek">
-                                <rect key="frame" x="121" y="141" width="133" height="30"/>
-                                <state key="normal" title="Present date picker"/>
-                                <connections>
-                                    <action selector="datePickerButtonTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k6p-J2-BJo"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kjx-H3-GRf">
-                                <rect key="frame" x="124.5" y="191" width="126" height="30"/>
-                                <state key="normal" title="Present table view"/>
-                                <connections>
-                                    <action selector="tableViewButtonTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U05-sJ-New"/>
-                                </connections>
-                            </button>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="abM-hp-Xi2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="2Qr-Kp-xO7"/>
-                            <constraint firstItem="Kjx-H3-GRf" firstAttribute="centerX" secondItem="abM-hp-Xi2" secondAttribute="centerX" id="JWe-Lk-HFv"/>
-                            <constraint firstItem="2Ib-gr-Cek" firstAttribute="top" secondItem="1d0-Qg-6HV" secondAttribute="bottom" constant="20" id="OL4-fQ-kVl"/>
-                            <constraint firstItem="1d0-Qg-6HV" firstAttribute="top" secondItem="abM-hp-Xi2" secondAttribute="bottom" constant="30" id="aQU-So-0og"/>
-                            <constraint firstItem="2Ib-gr-Cek" firstAttribute="centerX" secondItem="abM-hp-Xi2" secondAttribute="centerX" id="f8U-4b-Jtd"/>
-                            <constraint firstItem="1d0-Qg-6HV" firstAttribute="centerX" secondItem="abM-hp-Xi2" secondAttribute="centerX" id="fd7-8P-COG"/>
-                            <constraint firstItem="abM-hp-Xi2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tIc-WL-gzi"/>
-                            <constraint firstItem="Kjx-H3-GRf" firstAttribute="top" secondItem="2Ib-gr-Cek" secondAttribute="bottom" constant="20" id="zpJ-LM-dfx"/>
+                            <constraint firstItem="QPQ-oy-8PK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DcU-hN-RKr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QPQ-oy-8PK" secondAttribute="trailing" id="YNU-AJ-FX8"/>
+                            <constraint firstItem="QPQ-oy-8PK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pqd-Gi-ieF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QPQ-oy-8PK" secondAttribute="bottom" id="w5x-Ck-6mA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="NBBottomSheet Example" id="aLz-Bs-NZB"/>
+                    <connections>
+                        <outlet property="tableView" destination="QPQ-oy-8PK" id="TqK-VD-pUb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="916" y="-564"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qzy-BV-0mg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8Yd-Xd-8eZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="e0h-gT-tiU">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="7qM-dU-oXH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jx5-qW-pWI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="-564.46776611694156"/>
         </scene>
     </scenes>
 </document>
