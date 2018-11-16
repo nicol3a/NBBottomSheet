@@ -6,11 +6,11 @@
 [![Platform](https://img.shields.io/cocoapods/p/NBBottomSheet.svg)](http://www.apple.com/ios/)
 [![License](https://img.shields.io/github/license/nicol3a/NBBottomSheet.svg)](https://github.com/nicol3a/NBBottomSheet/blob/master/LICENSE)
 
-**NBBottomSheet** is an open-source iOS library that lets you present a bottom sheet using Auto Layout.
+**NBBottomSheet** is an open-source iOS library that allows you to present a `UIViewController` in a bottom sheet.
 
-The size of the bottom sheet is calculated based on the Auto Layout constraints of the view.
+The library relies on Auto Layout to calculate the size of the bottom sheet.
 
-![Demo](https://github.com/nicol3a/NBBottomSheet/blob/master/demo.gif)
+![Demo](https://user-images.githubusercontent.com/1519558/48593544-3a853f80-e91b-11e8-80eb-20b612d524d6.gif)
 
 ## Requirements
 
@@ -59,6 +59,12 @@ Drag the built `NBBottomSheet.framework` from the Carthage build folder into the
 
 ### Manually
 
+Add NBBottomSheet as a git [submodule](http://git-scm.com/docs/git-submodule) by running the following command:
+
+```bash
+$ git submodule add -b master https://github.com/nicol3a/NBBottomSheet.git
+```
+
 Drag the `NBBottomSheet.xcodeproj` file into your project and add the `NBBottomSheet.framework` in the "Embedded Binaries" section in the "General" panel of the application target.
 
 ## Usage
@@ -69,7 +75,7 @@ Initialize an instance of [`NBBottomSheetController`](https://github.com/nicol3a
 let bottomSheetController = NBBottomSheetController()
 ```
 
-To display a view controller in a bottom sheet, add the following code where you want the bottom sheet to display, passing the view controller from which [`NBBottomSheetController`](https://github.com/nicol3a/NBBottomSheet/blob/master/NBBottomSheet/NBBottomSheet/Sources/NBBottomSheetController.swift) should present:
+To display a view controller in a bottom sheet, add the following code where you want to display the bottom sheet, passing the view controller to present and the container view controller:
 
 ```swift
 let viewController = AlertViewController()
@@ -87,9 +93,12 @@ let bottomSheetController = NBBottomSheetController(configuration: configuration
 
 ### Auto Layout
 
-The library relies on Auto Layout to calculate the size of the view controller being presented.
+The library relies on the view controller's Auto Layout constraints to calculate the size of the bottom sheet being presented.
 
-You can either use Storyboards or xibs to create your view controller and set the Size to "Freeform" ("Simulated Metrics" section in the "Attributes inspector" panel), or you can create your view in code.
+You can either:
+
+- use Storyboards or xibs to create your view controller and set the Size to "Freeform" ("Simulated Metrics" section in the "Attributes inspector" panel),
+- or you can create your view programmatically.
 
 ## License
 
