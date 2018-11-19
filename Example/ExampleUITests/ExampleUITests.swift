@@ -60,7 +60,7 @@ class ExampleUITests: XCTestCase {
 
     func testSelectingRowDismissesTableViewBottomSheet() {
         app.openTableViewBottomSheet()
-        app.tables["TableViewBottomSheet"]/*@START_MENU_TOKEN@*/.staticTexts["Row 0"]/*[[".cells.staticTexts[\"Row 0\"]",".staticTexts[\"Row 0\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.tables["TableViewBottomSheet"].staticTexts["Row 0"].tap()
 
         XCTAssertFalse(app.isDisplayingTableViewBottomSheet)
     }
@@ -89,11 +89,11 @@ private extension XCUIApplication {
     }
 
     func openAlertBottomSheet() {
-        tables/*@START_MENU_TOKEN@*/.staticTexts["Alert example"]/*[[".cells.staticTexts[\"Alert example\"]",".staticTexts[\"Alert example\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        tables.staticTexts["Alert example"].tap()
     }
 
     func openDatePickerBottomSheet() {
-        tables/*@START_MENU_TOKEN@*/.staticTexts["Date picker example"]/*[[".cells.staticTexts[\"Date picker example\"]",".staticTexts[\"Date picker example\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        tables.staticTexts["Date picker example"].tap()
     }
 
     func openTableViewBottomSheet() {
