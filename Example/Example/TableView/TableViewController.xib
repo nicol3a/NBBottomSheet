@@ -26,6 +26,9 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="300" id="Maa-zE-MRn"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="TableViewBottomSheet"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="rbo-gL-Qne"/>
                         <outlet property="delegate" destination="-1" id="zud-Zb-orU"/>

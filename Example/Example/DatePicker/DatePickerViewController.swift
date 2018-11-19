@@ -15,6 +15,7 @@ class DatePickerViewController: UIViewController {
     private let datePicker: UIDatePicker = {
         let datePicker = UIDatePicker(frame: .zero)
         datePicker.translatesAutoresizingMaskIntoConstraints = false
+        datePicker.accessibilityIdentifier = "DatePickerBottomSheet"
         return datePicker
     }()
 
