@@ -2,7 +2,7 @@
 
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg)](https://github.com/Carthage/Carthage)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/NBBottomSheet.svg)](http://cocoapods.org/pods/NBBottomSheet)
-[![Swift 4.2](https://img.shields.io/badge/Swift-4.2-orange.svg?style=flat)](https://developer.apple.com/swift/)
+[![Swift 5.0](https://img.shields.io/badge/Swift-5.0-orange.svg?style=flat)](https://developer.apple.com/swift/)
 [![Platform](https://img.shields.io/cocoapods/p/NBBottomSheet.svg)](http://www.apple.com/ios/)
 [![License](https://img.shields.io/github/license/nicol3a/NBBottomSheet.svg)](https://github.com/nicol3a/NBBottomSheet/blob/master/LICENSE)
 
@@ -15,8 +15,8 @@ The library relies on Auto Layout to calculate the size of the bottom sheet.
 ## Requirements
 
 * iOS 9.0+
-* Xcode 10+
-* Swift 4.2
+* Xcode 11+
+* Swift 5.0
 
 ## Installation
 
@@ -30,7 +30,7 @@ platform :ios, '9.0'
 use_frameworks!
 
 target 'YOUR_TARGET_NAME' do
-    pod 'NBBottomSheet', '~> 1.0.0'
+    pod 'NBBottomSheet', '~> 1.0'
 end
 
 ```
@@ -46,7 +46,7 @@ $ pod install
 To integrate NBBottomSheet into your Xcode project using [Carthage](https://github.com/Carthage/Carthage), specify it in your `Cartfile`:
 
 ```ogdl
-github "nicol3a/NBBottomSheet" ~> 1.0.0
+github "nicol3a/NBBottomSheet" ~> 1.0
 ```
 
 Then, run the following command:

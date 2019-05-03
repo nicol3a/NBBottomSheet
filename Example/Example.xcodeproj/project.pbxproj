@@ -228,10 +228,11 @@
 				TargetAttributes = {
 					235D42BF218CBD7300363CBA = {
 						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1020;
 					};
 					239E4A7C21A3823B0009D5B5 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 235D42BF218CBD7300363CBA;
 					};
 				};
@@ -482,7 +483,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nicolasbichon.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -503,7 +504,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nicolasbichon.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -520,7 +521,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nicolasbichon..ExampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Example;
 			};
@@ -538,7 +539,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.nicolasbichon..ExampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Example;
 			};

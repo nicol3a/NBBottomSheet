@@ -12,5 +12,5 @@ Pod::Spec.new do |spec|
   spec.platform              = :ios
   spec.ios.deployment_target = '9.0'
   spec.requires_arc          = true
-  spec.swift_version         = '4.2'
+  spec.swift_version         = '5.0'
 end
