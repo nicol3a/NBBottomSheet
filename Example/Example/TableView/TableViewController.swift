@@ -22,6 +22,9 @@ extension TableViewController: UITableViewDataSource {
         var cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
         if cell == nil {
             cell = UITableViewCell(style: .default, reuseIdentifier: "Cell")
+            if #available(iOS 13.0, *) {
+                cell?.backgroundColor = .secondarySystemBackground
+            }
         }
         cell?.textLabel?.text = "Row \(indexPath.row)"
         return cell!
