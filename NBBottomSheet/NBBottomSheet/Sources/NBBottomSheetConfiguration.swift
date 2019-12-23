@@ -5,7 +5,7 @@
 //  Created by Bichon, Nicolas on 2018-10-30.
 //
 
-import Foundation
+import UIKit
 
 /// Encapsulates configuration information for the behavior of NBBottomSheet.
 public struct NBBottomSheetConfiguration {
@@ -16,21 +16,28 @@ public struct NBBottomSheetConfiguration {
     /// The minimum spacing between the bottom sheet and the top of the screen.
     public var minimumTopSpacing: CGFloat = 0.0
 
+    /// The background view's color.
+    public var backgroundViewColor: UIColor = .clear
+
     /// The default presentation and dismissal animation duration.
     public static let defaultAnimationDuration: TimeInterval = 0.4
 
     /// The default minimum spacing between the bottom sheet and the top of the screen.
     public static let defaultMinimumTopSpacing: CGFloat = 150.0
 
-    /**
-     Initializes a `NBBottomSheetConfiguration` object with optionally customizable behaviors.
+    /// The default background view's color.
+    public static let defaultBackgroundViewColor: UIColor = UIColor.black.withAlphaComponent(0.7)
 
-     - parameter animationDuration: The presentation and dismissal animation duration.
-     - parameter minimumTopSpacing: The minimum spacing between the bottom sheet and the top of the screen.
-     */
+    /// Initializes a `NBBottomSheetConfiguration` object with optionally customizable behaviors.
+    /// - Parameters:
+    ///   - animationDuration: The presentation and dismissal animation duration.
+    ///   - minimumTopSpacing: The minimum spacing between the bottom sheet and the top of the screen.
+    ///   - backgroundViewAlpha: The background view's color.
     public init(animationDuration: TimeInterval = defaultAnimationDuration,
-                minimumTopSpacing: CGFloat = defaultMinimumTopSpacing) {
+                minimumTopSpacing: CGFloat = defaultMinimumTopSpacing,
+                backgroundViewColor: UIColor = defaultBackgroundViewColor) {
         self.animationDuration = animationDuration
         self.minimumTopSpacing = minimumTopSpacing
+        self.backgroundViewColor = backgroundViewColor
     }
 }

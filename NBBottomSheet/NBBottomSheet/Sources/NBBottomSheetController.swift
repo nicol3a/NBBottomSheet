@@ -10,11 +10,8 @@ import UIKit
 /// `NBBottomSheetController` is an object that can be used to present bottom sheets.
 public class NBBottomSheetController: NSObject {
 
-    /**
-     Initializes a `NBBottomSheetController` object with a configuration.
-
-     - parameter configuration: The configuration struct that specifies how NBBottomSheet should be configured.
-     */
+    /// Initializes a `NBBottomSheetController` object with a configuration.
+    /// - Parameter configuration: The configuration struct that specifies how NBBottomSheet should be configured.
     public init(configuration: NBBottomSheetConfiguration? = nil) {
         if let configuration = configuration {
             NBConfiguration.shared = configuration
@@ -23,12 +20,10 @@ public class NBBottomSheetController: NSObject {
         super.init()
     }
 
-    /**
-     Presents a bottom sheet view controller embedded in a navigation controller.
-
-     - parameter viewController:          The presented view controller.
-     - parameter containerViewController: The presenting view controller.
-     */
+    /// Presents a bottom sheet view controller embedded in a navigation controller.
+    /// - Parameters:
+    ///   - viewController: The presented view controller
+    ///   - containerViewController: The presenting view controller.
     public func present(_ viewController: UIViewController, on containerViewController: UIViewController) {
         if viewController is UINavigationController {
             assertionFailure("Presenting 'UINavigationController' in a bottom sheet is not supported.")

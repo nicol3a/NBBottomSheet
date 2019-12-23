@@ -10,6 +10,6 @@ import Foundation
 /// Internal configuration object.
 struct NBConfiguration {
 
-    /// Singleton
+    /// Singleton.
     static var shared: NBBottomSheetConfiguration = NBBottomSheetConfiguration()
 }

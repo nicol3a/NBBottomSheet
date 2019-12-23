@@ -20,7 +20,7 @@ class NBBottomSheetPresentationController: UIPresentationController {
         let backroundView = UIView(frame: containerView.bounds)
 
         backroundView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        backroundView.backgroundColor = UIColor.black.withAlphaComponent(0.7)
+        backroundView.backgroundColor = NBConfiguration.shared.backgroundViewColor
 
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismiss))
         backroundView.addGestureRecognizer(gestureRecognizer)
@@ -30,9 +30,7 @@ class NBBottomSheetPresentationController: UIPresentationController {
 
     // MARK: - Actions
 
-    /**
-     Dismisses the presented view controller.
-     */
+    /// Dismisses the presented view controller.
     @objc func dismiss() {
         self.presentedViewController.dismiss(animated: true, completion: nil)
     }
