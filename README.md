@@ -30,7 +30,7 @@ platform :ios, '9.0'
 use_frameworks!
 
 target 'YOUR_TARGET_NAME' do
-    pod 'NBBottomSheet', '~> 1.0'
+    pod 'NBBottomSheet', '~> 1.1'
 end
 
 ```
@@ -46,7 +46,7 @@ $ pod install
 To integrate NBBottomSheet into your Xcode project using [Carthage](https://github.com/Carthage/Carthage), specify it in your `Cartfile`:
 
 ```ogdl
-github "nicol3a/NBBottomSheet" ~> 1.0
+github "nicol3a/NBBottomSheet" ~> 1.1
 ```
 
 Then, run the following command:
