@@ -8,8 +8,6 @@
 
 **NBBottomSheet** is an open-source iOS library that allows you to present a `UIViewController` in a bottom sheet.
 
-The library relies on Auto Layout to calculate the size of the bottom sheet.
-
 ![Demo](https://user-images.githubusercontent.com/1519558/48593544-3a853f80-e91b-11e8-80eb-20b612d524d6.gif)
 
 ## Requirements
@@ -30,7 +28,7 @@ platform :ios, '9.0'
 use_frameworks!
 
 target 'YOUR_TARGET_NAME' do
-    pod 'NBBottomSheet', '~> 1.1'
+    pod 'NBBottomSheet', '~> 1.2'
 end
 
 ```
@@ -87,18 +85,9 @@ bottomSheetController.present(viewController, on: self)
 If you don’t want to use [`NBBottomSheetController`](https://github.com/nicol3a/NBBottomSheet/blob/master/NBBottomSheet/NBBottomSheet/Sources/NBBottomSheetController.swift)’s default configuration, you can specify a [`NBBottomSheetConfiguration`](https://github.com/nicol3a/NBBottomSheet/blob/master/NBBottomSheet/NBBottomSheet/Sources/NBBottomSheetConfiguration.swift) instance on initialization of [`NBBottomSheetController`](https://github.com/nicol3a/NBBottomSheet/blob/master/NBBottomSheet/NBBottomSheet/Sources/NBBottomSheetController.swift).
 
 ```swift
-let configuration = NBBottomSheetConfiguration(animationDuration: 0.4)
+let configuration = NBBottomSheetConfiguration(animationDuration: 0.4, sheetSize: .fixed(300))
 let bottomSheetController = NBBottomSheetController(configuration: configuration)
 ```
-
-### Auto Layout
-
-The library relies on the view controller's Auto Layout constraints to calculate the size of the bottom sheet being presented.
-
-You can either:
-
-- use Storyboards or xibs to create your view controller and set the Size to "Freeform" ("Simulated Metrics" section in the "Attributes inspector" panel),
-- or you can create your view programmatically.
 
 ## License
 

@@ -41,7 +41,6 @@
             <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="kVK-1e-X4T" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="7kS-EU-OM3"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Jm6-9x-33z" secondAttribute="bottom" constant="20" id="BvX-dY-0Jy"/>
                 <constraint firstItem="Jm6-9x-33z" firstAttribute="top" secondItem="kVK-1e-X4T" secondAttribute="bottom" constant="20" id="MuU-Qs-mxL"/>
                 <constraint firstItem="kVK-1e-X4T" firstAttribute="top" secondItem="gLj-cu-zid" secondAttribute="bottom" constant="8" id="SVc-vW-hny"/>
                 <constraint firstItem="gLj-cu-zid" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="gTL-za-eUf"/>

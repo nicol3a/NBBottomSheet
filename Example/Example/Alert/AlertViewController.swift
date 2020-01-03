@@ -12,8 +12,8 @@ class AlertViewController: UIViewController {
 
     // MARK: - View Life Cycle
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
 
         view.roundCorners([.topLeft, .topRight], radius: 15)
     }

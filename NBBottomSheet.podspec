@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name                  = 'NBBottomSheet'
-  spec.version               = '1.1.0'
+  spec.version               = '1.2.0'
   spec.license               = { :type => 'MIT', :file => 'LICENSE' }
   spec.homepage              = 'https://github.com/nicol3a/NBBottomSheet'
   spec.authors               = { 'Nicolas Bichon' => 'bichon.nicolas@gmail.com' }

@@ -30,31 +30,6 @@ public class NBBottomSheetController: NSObject {
             return
         }
 
-        let width: CGFloat = UIScreen.main.bounds.width
-        let maxHeight: CGFloat = UIScreen.main.bounds.height - NBConfiguration.shared.minimumTopSpacing
-        var height: CGFloat = maxHeight
-
-        viewController.view.setNeedsLayout()
-        viewController.view.layoutIfNeeded()
-        let size = viewController.view.systemLayoutSizeFitting(CGSize(width: width, height: maxHeight))
-
-        height = size.height <= maxHeight ? size.height : maxHeight
-
-        // Increase height (only useful for the iPhone X for now)
-        if #available(iOS 11.0, *) {
-            guard let window = UIApplication.shared.keyWindow else {
-                return
-            }
-
-            let bottomPadding = window.safeAreaInsets.bottom
-            if height + bottomPadding <= maxHeight {
-                height += bottomPadding
-            }
-        }
-
-        let positionY = UIScreen.main.bounds.height - height
-        viewController.view.frame = CGRect(x: 0.0, y: positionY, width: width, height: height)
-
         let bottomSheetTransitioningDelegate = NBBottomSheetTransitioningDelegate()
         viewController.transitioningDelegate = bottomSheetTransitioningDelegate
         viewController.modalPresentationStyle = .custom

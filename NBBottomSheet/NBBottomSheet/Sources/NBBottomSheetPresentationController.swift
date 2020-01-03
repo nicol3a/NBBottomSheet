@@ -37,6 +37,28 @@ class NBBottomSheetPresentationController: UIPresentationController {
 
     // MARK: - UIPresentationController
 
+    override func containerViewWillLayoutSubviews() {
+        guard let presentedView = presentedView, let containerView = containerView else { return }
+
+        var bottomSheetHeight: CGFloat
+
+        switch NBConfiguration.shared.sheetSize {
+        case .fixed(let height):
+            bottomSheetHeight = height
+        }
+
+        // Increase height (iPhone X/XS/11)
+        if #available(iOS 11.0, *) {
+            guard let window = UIApplication.shared.keyWindow else {
+                return
+            }
+
+            bottomSheetHeight += window.safeAreaInsets.bottom
+        }
+
+        presentedView.frame = CGRect(x: 0, y: containerView.bounds.height - bottomSheetHeight, width: containerView.bounds.width, height: bottomSheetHeight)
+    }
+
     override func presentationTransitionWillBegin() {
         super.presentationTransitionWillBegin()
 
