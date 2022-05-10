@@ -24,7 +24,7 @@ public class NBBottomSheetController: NSObject {
     /// - Parameters:
     ///   - viewController: The presented view controller
     ///   - containerViewController: The presenting view controller.
-    public func present(_ viewController: UIViewController, on containerViewController: UIViewController) {
+    public func present(_ viewController: UIViewController, on containerViewController: UIViewController, completion: (() -> Void)? = nil) {
         if viewController is UINavigationController {
             assertionFailure("Presenting 'UINavigationController' in a bottom sheet is not supported.")
             return
@@ -34,6 +34,6 @@ public class NBBottomSheetController: NSObject {
         viewController.transitioningDelegate = bottomSheetTransitioningDelegate
         viewController.modalPresentationStyle = .custom
 
-        containerViewController.present(viewController, animated: true, completion: nil)
+        containerViewController.present(viewController, animated: true, completion: completion)
     }
 }
